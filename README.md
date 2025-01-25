@@ -55,7 +55,7 @@ A powerful **LeetCode Test Runner** integrated with **Visual Studio Code** to au
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/Hi-anshi/Leetcode-cph.git>
    ```
 
 2. **Install Dependencies**:
