@@ -1,0 +1,74 @@
+{
+  "name": "leetcode-helper",
+  "displayName": "leetcode helper",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages", "Testing"
+  ],
+  "activationEvents": [
+    "onCommand:cph.fetchTestCases",
+    "onCommand:cph.addTestCase",
+    "onCommand:cph.runTestCases"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+    "activitybar": [
+      {
+        "id": "cph",
+        "title": "CPH",
+        "icon": "media/icon.png"
+      }
+    ]
+  },
+  "views": {
+    "cph": [
+      {
+        "id": "cph-sidebar",
+        "name": "CPH Sidebar",
+        "type": "webview",
+        "icon": "media/icon.png"
+      }
+    ]
+  },
+    "commands": [
+      {
+        "command": "cph.fetchTestCases",
+        "title": "CPH: Fetch Test Cases"
+      },
+      {
+        "command": "cph.addTestCase",
+        "title": "CPH: Add Test Case"
+      },
+      {
+        "command": "cph.runTestCases",
+        "title": "CPH: Run Test Cases"
+      },
+      {
+        "command": "cph.createSolutionFile",
+        "title": "CPH: Create Solution File"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.16.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "vscode": "^1.1.37"
+  }
+}
